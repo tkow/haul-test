@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "jsx": "react-native",
+    "allowSyntheticDefaultImports": true,
+    "target": "es2015",
+    "moduleResolution": "node",
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "baseUrl": "./app",
+    "skipLibCheck": true,
+    "paths": {
+      "~": ["./"],
+      "~/*": ["./*", "./*.native", "./*.ios", "./*.android"],
+      "lev-ts-lib/*": [
+        "../vender/ts_modules/*",
+        "../vender/ts_modules/*.native",
+        "../vender/ts_modules/*.ios",
+        "../vender/ts_modules/*.android"
+      ],
+      "native-base-theme": ["../native-base-theme"],
+      "native-base-theme/*": ["../native-base-theme/*"],
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+  },
+  "include": ["./app","./vender/ts_modules"],
+  "exclude": [
+    "node_modules",
+    "android",
+    "ios",
+    "env",
+    ".*",
+    "fastlane",
+    "native-base-theme",
+    "**/node_modules",
+    "__tests__",
+    "**/__tests__",
+    "vender/ts_modules/firebase",
+    "vender/ts_modules/algoliaIndexManager",
+    "__mocks__",
+    "tasks",
+    "**/tasks",
+    "**/*.web.tsx",
+    "**/*.web.ts"
+  ]
+}

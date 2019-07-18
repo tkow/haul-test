@@ -50,15 +50,6 @@ const webpackConfig = ({ config, env, runtime }) => {
               loader: 'ts-loader'
             }
           ]
-        },
-        {
-          test: /\.yaml|\.yml$/,
-          include: [path.join(__dirname, 'app/')],
-          use: [
-            {
-              loader: 'yaml-json-loader'
-            }
-          ]
         }
       ]
     },
