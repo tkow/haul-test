@@ -19,7 +19,6 @@ const webpackConfig = ({ config, env, runtime }) => {
             path.join(__dirname, 'app/'),
             path.join(__dirname, 'native-base-theme'),
             path.join(__dirname, 'node_modules/native-base'),
-            path.join(__dirname, 'vender/ts_modules'),
             path.join(__dirname, 'node_modules/native-base-shoutem-theme'),
             path.join(
               __dirname,
@@ -37,7 +36,6 @@ const webpackConfig = ({ config, env, runtime }) => {
           test: /\.tsx?$/,
           include: [
             path.join(__dirname, 'app/'),
-            path.join(__dirname, 'vender/ts_modules')
           ],
           use: [
             {
@@ -56,8 +54,6 @@ const webpackConfig = ({ config, env, runtime }) => {
     resolve: {
       alias: {
         '~': path.join(__dirname, 'app/'),
-        'lev-ts-lib': path.join(__dirname, 'vender', 'ts_modules/'),
-        'native-base-theme': path.join(__dirname, 'native-base-theme/')
       },
       modules: [path.resolve(__dirname, 'app'), 'node_modules'],
       extensions: [
