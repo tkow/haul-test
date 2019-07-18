@@ -36,6 +36,7 @@ const webpackConfig = ({ config, env, runtime }) => {
           test: /\.tsx?$/,
           include: [
             path.join(__dirname, 'app/'),
+            path.join(__dirname),
           ],
           use: [
             {
@@ -75,17 +76,19 @@ const webpackConfig = ({ config, env, runtime }) => {
       ]
     }
   };
-  const _config = smart(config, addConfig);
-  console.log(runtime);
-  Object.keys(_config).forEach(configKey => {
-    config[configKey] = _config[configKey];
-  });
+  config.resolve.extensions = config.resolve.extensions.concat(addConfig.resolve.extensions)
+  config.resolve.alias = Object.keys(addConfig.resolve.alias).reduce((v,next) => {
+    v[next] = addConfig.resolve.alias[next]
+  }, config.resolve.alias || {})
+  config.resolve.modules = config.resolve.modules ? config.resolve.modules.concat(addConfig.resolve.modules): addConfig.resolve.modules
+  config.module.rules = config.module.rules.concat(addConfig.module.rules)
+  config.resolveLoader = addConfig.resolveLoader
 };
 
 export default makeConfig({
   bundles: {
     index: {
-      entry: withPolyfills('./index.js'),
+      entry: withPolyfills('./index.tsx'),
       transform: webpackConfig
     }
   }

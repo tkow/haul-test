@@ -25,7 +25,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
   },
-  "include": ["./app","./vender/ts_modules"],
+  "include": ["./app","./vender/ts_modules","index.ts"],
   "exclude": [
     "node_modules",
     "android",
