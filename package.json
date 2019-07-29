@@ -7,26 +7,27 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/react-native-document-picker": "^2.0.1",
     "@types/typescript": "^2.0.0",
     "@types/webpack-merge": "^4.1.5",
-    "babel-loader": "^8.0.6",
     "react": "^16.8.6",
-    "react-native": "0.60.3",
+    "react-native": "0.60.4",
+    "react-native-document-picker": "^3.2.4",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
     "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/runtime": "^7.5.0",
-    "@haul-bundler/cli": "^0.8.0",
-    "@haul-bundler/preset-0.60": "^0.8.0",
-    "@react-native-community/eslint-config": "^0.0.3",
+    "@babel/core": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@haul-bundler/cli": "^0.9.1",
+    "@haul-bundler/preset-0.60": "^0.9.0",
+    "@react-native-community/eslint-config": "^0.0.5",
     "@types/react": "^16.8.23",
     "@types/react-native": "^0.60.2",
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
-    "metro-react-native-babel-preset": "^0.54.1",
+    "metro-react-native-babel-preset": "^0.55.0",
     "react-test-renderer": "16.8.6"
   },
   "jest": {
