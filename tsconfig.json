@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "target": "es2015",
+    "lib": ["es2016"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "resolveJsonModule": true
+  },
+}
